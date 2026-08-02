@@ -1,13 +1,41 @@
+/* Build Well — brand tokens
+   Source of truth: DESIGN.buildwell.md */
+
 :root {
-  --ais-bg: #07121c;
-  --ais-surface: #0d2031;
-  --ais-surface-2: #195066;
-  --ais-border: #252d33;
-  --ais-accent: #37bdf8;
-  --ais-accent-glow: #0307ff;
-  --ais-warn: #f09025;
-  --ais-text: #ffffff;
-  --ais-text-dim: #96a2b6;
-  --font-mono: "Roboto Mono", ui-monospace, Menlo, monospace;
-  --font-display: "Montserrat", system-ui, sans-serif;
+  /* Canvas */
+  --bw-green: #366560;        /* primary background (logo green) */
+  --bw-green-deep: #294f4b;   /* cards, panels, shadows */
+  --bw-green-soft: #51716d;   /* borders, dividers, hairlines */
+
+  /* Accent */
+  --bw-blush: #edb8b6;        /* primary accent (logo blush) */
+  --bw-blush-deep: #d99a97;   /* accent variant, small-text contrast */
+
+  /* Light canvas + text */
+  --bw-ivory: #f7f1ea;        /* light background + text on green */
+  --bw-ink: #22302e;          /* text on ivory */
+  --bw-text-dim: #b9cdc9;     /* secondary text on green */
+  --bw-ink-dim: #5f6f6c;      /* secondary text on ivory */
+
+  /* Caption pill background */
+  --bw-caption-bg: rgba(41, 79, 75, 0.85);
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;        /* headlines, quotes, numbers */
+  --font-label: "Montserrat", system-ui, sans-serif; /* kickers, labels, captions, CTAs */
+  --label-tracking: 0.12em;
+
+  /* Legacy aliases — existing template projects reference --ais-* vars.
+     These remap them to Build Well colors so old comps render on-brand
+     without editing every file. Remove once you've swept the projects. */
+  --ais-bg: var(--bw-green);
+  --ais-surface: var(--bw-green-deep);
+  --ais-surface-2: var(--bw-green-soft);
+  --ais-border: var(--bw-green-soft);
+  --ais-accent: var(--bw-blush);
+  --ais-accent-glow: var(--bw-blush-deep);
+  --ais-warn: var(--bw-blush-deep);
+  --ais-text: var(--bw-ivory);
+  --ais-text-dim: var(--bw-text-dim);
+  --font-mono: "Montserrat", system-ui, sans-serif;
 }
